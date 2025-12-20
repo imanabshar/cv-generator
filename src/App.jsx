@@ -1,7 +1,14 @@
+import Education from "./components/educationInfo";
 import PersonalInfo from "./components/personalInfo";
 
 function App() {
-  return <PersonalInfo />;
+
+  return (
+    <>
+    <PersonalInfo />;
+    <Education />
+    </>
+  )
 }
 
 export default App;
