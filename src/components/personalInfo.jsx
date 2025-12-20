@@ -11,7 +11,9 @@ function PersonalInfo() {
       <h2 className="text-xl font-semibold mb-4">Personal Information</h2>
 
       <div className="mb-4">
-        <label htmlFor="name" className="block mb-1 font-medium">Full Name</label>
+        <label htmlFor="name" className="block mb-1 font-medium">
+          Full Name
+        </label>
         <input
           id="name"
           type="text"
@@ -22,7 +24,9 @@ function PersonalInfo() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="email" className="block mb-1 font-medium">Email</label>
+        <label htmlFor="email" className="block mb-1 font-medium">
+          Email
+        </label>
         <input
           id="email"
           type="email"
@@ -33,7 +37,9 @@ function PersonalInfo() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="phone" className="block mb-1 font-medium">Phone Number</label>
+        <label htmlFor="phone" className="block mb-1 font-medium">
+          Phone Number
+        </label>
         <input
           id="phone"
           type="text"
@@ -44,7 +50,9 @@ function PersonalInfo() {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="address" className="block mb-1 font-medium">Address</label>
+        <label htmlFor="address" className="block mb-1 font-medium">
+          Address
+        </label>
         <input
           id="address"
           type="text"
