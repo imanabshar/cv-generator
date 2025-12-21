@@ -9,7 +9,7 @@ function Input({ label, name, type, placeholder, value, onChange, rows }) {
         <textarea
           id={name}
           name={name}
-          type = {type}
+          type={type}
           placeholder={placeholder}
           value={value}
           onChange={onChange}

@@ -34,10 +34,11 @@ function PersonalInfo({ personalInfo, setPersonalInfo }) {
       <Input
         label="Career Objective"
         name="objective"
-        type="text"
+        type="textarea"
         placeholder="Enter a short career objective"
         value={personalInfo.objective}
         onChange={handleChange}
+        rows={2}
       />
     </div>
   );

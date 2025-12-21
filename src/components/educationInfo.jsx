@@ -14,15 +14,6 @@ function EducationInfo({ educationInfo, setEducationInfo }) {
       <h2 className="text-xl font-semibold mb-4">Education</h2>
 
       <Input
-        label="School / College"
-        name="school"
-        type="text"
-        placeholder="Enter School or College"
-        value={educationInfo.school}
-        onChange={handleChange}
-      />
-
-      <Input
         label="Degree"
         name="degree"
         type="text"
@@ -32,11 +23,11 @@ function EducationInfo({ educationInfo, setEducationInfo }) {
       />
 
       <Input
-        label="Field of Study"
-        name="field"
+        label="School / College"
+        name="school"
         type="text"
-        placeholder="Enter Field of Study"
-        value={educationInfo.field}
+        placeholder="Enter School or College"
+        value={educationInfo.school}
         onChange={handleChange}
       />
 

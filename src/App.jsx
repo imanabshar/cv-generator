@@ -5,6 +5,7 @@ import EducationInfo from "./components/EducationInfo";
 import ExperienceInfo from "./components/ExperienceInfo";
 import ContactInfo from "./components/contactInfo";
 import Skills from "./components/Skills";
+import CvPreview from "./components/CvPreview/CvPreview";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -14,9 +15,8 @@ function App() {
   });
 
   const [educationInfo, setEducationInfo] = useState({
-    school: "",
     degree: "",
-    field: "",
+    school: "",
     city: "",
     country: "",
     startDate: "",
@@ -42,29 +42,40 @@ function App() {
   const [skills, setSkills] = useState([]);
 
   return (
-    <div>
-      <PersonalInfo
-        personalInfo={personalInfo}
-        setPersonalInfo={setPersonalInfo}
-      />
+    <div className="m-10 flex gap-12">
+      <div>
+        <PersonalInfo
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
+        />
 
-      <EducationInfo
-        educationInfo={educationInfo}
-        setEducationInfo={setEducationInfo}
-      />
+        <EducationInfo
+          educationInfo={educationInfo}
+          setEducationInfo={setEducationInfo}
+        />
 
-      <ExperienceInfo
-        experienceInfo={experienceInfo}
-        setExperienceInfo={setExperienceInfo}
-      />
+        <ExperienceInfo
+          experienceInfo={experienceInfo}
+          setExperienceInfo={setExperienceInfo}
+        />
 
-      <ContactInfo 
-      contactInfo={contactInfo} 
-      setContactInfo={setContactInfo} />
+        <ContactInfo
+          contactInfo={contactInfo}
+          setContactInfo={setContactInfo}
+        />
 
-      <Skills 
-      skills={skills} 
-      setSkills={setSkills} />
+        <Skills skills={skills} setSkills={setSkills} />
+      </div>
+
+      <div>
+        <CvPreview
+          contactInfo={contactInfo}
+          skills={skills}
+          personalInfo={personalInfo}
+          educationInfo={educationInfo}
+          experienceInfo={experienceInfo}
+        />
+      </div>
     </div>
   );
 }
