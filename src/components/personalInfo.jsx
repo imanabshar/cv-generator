@@ -3,7 +3,6 @@ import Input from "./Input";
 function PersonalInfo({ personalInfo, setPersonalInfo }) {
   function handleChange(e) {
     const { name, value } = e.target;
-
     setPersonalInfo({
       ...personalInfo,
       [name]: value,
@@ -24,29 +23,20 @@ function PersonalInfo({ personalInfo, setPersonalInfo }) {
       />
 
       <Input
-        label="Email"
-        name="email"
-        type="email"
-        placeholder="Enter Email "
-        value={personalInfo.email}
+        label="Position / Title"
+        name="title"
+        type="text"
+        placeholder="Enter Your Position"
+        value={personalInfo.title}
         onChange={handleChange}
       />
 
       <Input
-        label="Phone Number"
-        name="phone"
+        label="Career Objective"
+        name="objective"
         type="text"
-        placeholder="Enter Phone Number"
-        value={personalInfo.phone}
-        onChange={handleChange}
-      />
-
-      <Input
-        label="Address"
-        name="address"
-        type="text"
-        placeholder="Enter Addresss"
-        value={personalInfo.address}
+        placeholder="Enter a short career objective"
+        value={personalInfo.objective}
         onChange={handleChange}
       />
     </div>

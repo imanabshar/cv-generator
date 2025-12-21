@@ -3,13 +3,14 @@ import { useState } from "react";
 import PersonalInfo from "./components/PersonalInfo";
 import EducationInfo from "./components/EducationInfo";
 import ExperienceInfo from "./components/ExperienceInfo";
+import ContactInfo from "./components/contactInfo";
+import Skills from "./components/Skills";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
     name: "",
-    email: "",
-    phone: "",
-    address: "",
+    title: "",
+    objective: "",
   });
 
   const [educationInfo, setEducationInfo] = useState({
@@ -31,6 +32,15 @@ function App() {
     description: "",
   });
 
+  const [contactInfo, setContactInfo] = useState({
+    phone: "",
+    email: "",
+    location: "",
+    linkedin: "",
+  });
+
+  const [skills, setSkills] = useState([]);
+
   return (
     <div>
       <PersonalInfo
@@ -47,6 +57,14 @@ function App() {
         experienceInfo={experienceInfo}
         setExperienceInfo={setExperienceInfo}
       />
+
+      <ContactInfo 
+      contactInfo={contactInfo} 
+      setContactInfo={setContactInfo} />
+
+      <Skills 
+      skills={skills} 
+      setSkills={setSkills} />
     </div>
   );
 }
