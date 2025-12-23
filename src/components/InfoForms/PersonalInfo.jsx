@@ -1,17 +1,18 @@
+import FormBlock from "../shared/FormBlock";
 import Input from "../shared/Input";
+import { FaUser } from "react-icons/fa";
 
 function PersonalInfo({ personalInfo, setPersonalInfo }) {
-  function handleChange(e) {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setPersonalInfo({
       ...personalInfo,
       [name]: value,
     });
-  }
+  };
 
   return (
-    <div className="p-4 border w-full max-w-md">
-      <h2 className="text-xl font-semibold mb-4">Personal Information</h2>
+    <FormBlock title="Profile" icon={<FaUser />}>
       <Input
         label="Full Name"
         name="name"
@@ -39,7 +40,7 @@ function PersonalInfo({ personalInfo, setPersonalInfo }) {
         onChange={handleChange}
         rows={2}
       />
-    </div>
+    </FormBlock>
   );
 }
 

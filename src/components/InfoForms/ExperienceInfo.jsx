@@ -1,4 +1,6 @@
+import FormBlock from "../shared/FormBlock";
 import Input from "../shared/Input";
+import { FaBriefcase } from "react-icons/fa";
 
 function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
   const handleChange = (e) => {
@@ -10,8 +12,7 @@ function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
   };
 
   return (
-    <div className="p-4 border w-full max-w-md mt-4">
-      <h2 className="text-xl font-semibold mb-4">Experience</h2>
+    <FormBlock title="Experience" icon={<FaBriefcase />}>
       <Input
         label="Job Title"
         name="jobTitle"
@@ -56,7 +57,7 @@ function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
         onChange={handleChange}
         rows={3}
       />
-    </div>
+    </FormBlock>
   );
 }
 

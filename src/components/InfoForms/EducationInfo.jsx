@@ -1,4 +1,6 @@
+import FormBlock from "../shared/FormBlock";
 import Input from "../shared/Input";
+import { FaGraduationCap } from "react-icons/fa";
 
 function EducationInfo({ educationInfo, setEducationInfo }) {
   const handleChange = (e) => {
@@ -10,9 +12,7 @@ function EducationInfo({ educationInfo, setEducationInfo }) {
   };
 
   return (
-    <div className="p-4 border w-full max-w-md mt-4">
-      <h2 className="text-xl font-semibold mb-4">Education</h2>
-
+    <FormBlock title="Education" icon={<FaGraduationCap  className="text-[22px]"/>}>
       <Input
         label="Degree"
         name="degree"
@@ -56,7 +56,7 @@ function EducationInfo({ educationInfo, setEducationInfo }) {
           onChange={handleChange}
         />
       </div>
-    </div>
+    </FormBlock>
   );
 }
 
