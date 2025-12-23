@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "../shared/Input";
 
 function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
   const handleChange = (e) => {
@@ -12,7 +12,6 @@ function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
   return (
     <div className="p-4 border w-full max-w-md mt-4">
       <h2 className="text-xl font-semibold mb-4">Experience</h2>
-
       <Input
         label="Job Title"
         name="jobTitle"
@@ -31,27 +30,18 @@ function ExperienceInfo({ experienceInfo, setExperienceInfo }) {
         onChange={handleChange}
       />
 
-      <Input
-        label="Location"
-        name="location"
-        type="text"
-        placeholder="Enter Location"
-        value={experienceInfo.location}
-        onChange={handleChange}
-      />
-
       <div className="flex gap-4 mb-4">
         <Input
           label="Start Date"
           name="startDate"
-          type="date"
+          type="text"
           value={experienceInfo.startDate}
           onChange={handleChange}
         />
         <Input
           label="End Date"
           name="endDate"
-          type="date"
+          type="text"
           value={experienceInfo.endDate}
           onChange={handleChange}
         />

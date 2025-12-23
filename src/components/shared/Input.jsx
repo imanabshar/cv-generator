@@ -1,5 +1,5 @@
 function Input({ label, name, type, placeholder, value, onChange, rows }) {
-  // for textarea in experience Info
+  // for textarea in experience and personal Info
   if (type === "textarea") {
     return (
       <div className="mb-4">

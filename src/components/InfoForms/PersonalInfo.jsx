@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "../shared/Input";
 
 function PersonalInfo({ personalInfo, setPersonalInfo }) {
   function handleChange(e) {
@@ -12,7 +12,6 @@ function PersonalInfo({ personalInfo, setPersonalInfo }) {
   return (
     <div className="p-4 border w-full max-w-md">
       <h2 className="text-xl font-semibold mb-4">Personal Information</h2>
-
       <Input
         label="Full Name"
         name="name"

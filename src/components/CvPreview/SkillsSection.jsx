@@ -2,11 +2,15 @@ function SkillsSection({ skills }) {
   if (skills.length === 0) return null;
 
   return (
-    <div className="mt-4">
-      <h2 className="text-lg font-semibold mb-2">Skills</h2>
-      {skills.map((skill) => (
-        <li key={skill}>-{skill}</li>
-      ))}
+    <div>
+      <h2 className="text-2xl font-semibold mb-5 mt-10 text-white">Skills</h2>
+      <ul className="flex flex-col gap-6 list-disc list-inside text-white space-y-1">
+        {skills.map((skill) => (
+          <li key={skill} className="text-white">
+            {skill}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

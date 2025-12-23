@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import PersonalInfo from "./components/PersonalInfo";
-import EducationInfo from "./components/EducationInfo";
-import ExperienceInfo from "./components/ExperienceInfo";
-import ContactInfo from "./components/contactInfo";
-import Skills from "./components/Skills";
+import PersonalInfo from "./components/InfoForms/PersonalInfo";
+import EducationInfo from "./components/InfoForms/EducationInfo";
+import ExperienceInfo from "./components/InfoForms/ExperienceInfo";
+import ContactInfo from "./components/InfoForms/ContactInfo";
+import Skills from "./components/InfoForms/Skills";
 import CvPreview from "./components/CvPreview/CvPreview";
 
 function App() {
@@ -17,8 +17,7 @@ function App() {
   const [educationInfo, setEducationInfo] = useState({
     degree: "",
     school: "",
-    city: "",
-    country: "",
+    location: "",
     startDate: "",
     endDate: "",
   });
@@ -26,7 +25,6 @@ function App() {
   const [experienceInfo, setExperienceInfo] = useState({
     jobTitle: "",
     company: "",
-    location: "",
     startDate: "",
     endDate: "",
     description: "",
@@ -42,8 +40,9 @@ function App() {
   const [skills, setSkills] = useState([]);
 
   return (
-    <div className="m-10 flex gap-12">
-      <div>
+    <div className="w-full p-10 flex gap-12">
+      {/* Forms Column */}
+      <div className="w-[30%]">
         <PersonalInfo
           personalInfo={personalInfo}
           setPersonalInfo={setPersonalInfo}
@@ -67,7 +66,8 @@ function App() {
         <Skills skills={skills} setSkills={setSkills} />
       </div>
 
-      <div>
+      {/*CV Preview */}
+      <div className="w-[70%]">
         <CvPreview
           contactInfo={contactInfo}
           skills={skills}

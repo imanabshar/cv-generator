@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "../shared/Input";
 
 function EducationInfo({ educationInfo, setEducationInfo }) {
   const handleChange = (e) => {
@@ -31,37 +31,27 @@ function EducationInfo({ educationInfo, setEducationInfo }) {
         onChange={handleChange}
       />
 
-      <div className="flex gap-4 mb-4">
-        <Input
-          label="City"
-          name="city"
-          type="text"
-          placeholder="Enter City"
-          value={educationInfo.city}
-          onChange={handleChange}
-        />
-        <Input
-          label="Country"
-          name="country"
-          type="text"
-          placeholder="Enter Country"
-          value={educationInfo.country}
-          onChange={handleChange}
-        />
-      </div>
+      <Input
+        label="Location"
+        name="location"
+        type="text"
+        placeholder="Enter Location"
+        value={educationInfo.location}
+        onChange={handleChange}
+      />
 
       <div className="flex gap-4 mb-4">
         <Input
           label="Start Date"
           name="startDate"
-          type="date"
+          type="text"
           value={educationInfo.startDate}
           onChange={handleChange}
         />
         <Input
           label="End Date"
           name="endDate"
-          type="date"
+          type="text"
           value={educationInfo.endDate}
           onChange={handleChange}
         />

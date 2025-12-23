@@ -1,16 +1,15 @@
 function PersonalInfoSection({ personalInfo }) {
   const hasPersonalInfo =
-    personalInfo.name || 
-    personalInfo.title || 
-    personalInfo.objective;
+    personalInfo.name || personalInfo.title || personalInfo.objective;
 
   if (!hasPersonalInfo) return null;
 
   return (
     <div>
-      <h1 className="font-semibold">{personalInfo.name}</h1>
-      <h3>{personalInfo.title}</h3>
-      <p>{personalInfo.objective}</p>
+      <h1 className="font-bold text-4xl">{personalInfo.name}</h1>
+      <h3 className="text-xl text-gray-600 mt-2">{personalInfo.title}</h3>
+      <p className="text-gray-700 my-4">{personalInfo.objective}</p>
+      <div className="border-b border-gray-300 mt-2"></div>
     </div>
   );
 }
