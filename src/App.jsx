@@ -13,6 +13,7 @@ function App() {
     name: "",
     title: "",
     objective: "",
+    photo: null,
   });
 
   const [educationInfo, setEducationInfo] = useState({

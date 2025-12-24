@@ -1,3 +1,4 @@
+import ProfilePhoto from "./ProfilePhoto";
 import ContactSection from "./ContactSection";
 import SkillsSection from "./SkillsSection";
 import PersonalInfoSection from "./PersonalInfoSection";
@@ -14,7 +15,9 @@ function CvPreview({
   return (
     <div className="w-full min-h-screen h flex shadow rounded-md">
       {/* Left Column */}
-      <div className="py-6 px-8 w-[30%] bg-gray-950">
+
+      <div className="py-10 px-8 w-[30%] bg-gray-950">
+          <ProfilePhoto photo={personalInfo.photo} />
         <ContactSection contactInfo={contactInfo} />
         <SkillsSection skills={skills} />
       </div>

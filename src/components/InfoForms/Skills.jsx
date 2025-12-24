@@ -35,8 +35,8 @@ function Skills({ skills, setSkills }) {
         <button
           type="button"
           onClick={addSkill}
-          className="bg-blue-400
-             hover:from-slate-500 hover:to-blue-500 
+          className="bg-blue-600
+             hover:bg-blue-700
              text-white px-4 py-2 rounded-md transition"
         >
           <FaPlus />

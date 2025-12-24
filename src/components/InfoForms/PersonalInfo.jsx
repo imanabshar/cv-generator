@@ -11,8 +11,38 @@ function PersonalInfo({ personalInfo, setPersonalInfo }) {
     });
   };
 
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const photoURL = URL.createObjectURL(file);
+
+    setPersonalInfo({
+      ...personalInfo,
+      photo: photoURL,
+    });
+  };
+
   return (
     <FormBlock title="Profile" icon={<FaUser />}>
+      <div className="mb-4">
+        <label className="block font-semibold mb-2">Profile Photo</label>
+
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handlePhotoUpload}
+          className="block w-full 
+               file:px-4 file:py-2
+               file:bg-blue-700 file:text-white
+                file:border-0
+                file:mr-3
+               file:cursor-pointer
+               hover:file:bg-blue-800
+               border bg-gray-100  text-gray-500 rounded-md"
+        />
+      </div>
+
       <Input
         label="Full Name"
         name="name"
