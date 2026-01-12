@@ -11,12 +11,12 @@ function ExperienceSection({ experienceInfo }) {
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-semibold mb-6 text-center text-white bg-black py-2 px-6 rounded">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-white bg-black py-2 px-6 rounded">
         Work Experience
       </h2>
-      <div className="flex flex-col gap-4 text-gray-500">
+      <div className="flex flex-col gap-4 text-gray-500 text-sm sm:text-base">
         {experienceInfo.jobTitle && (
-          <p className="font-medium text-gray-800 text-lg">
+          <p className="font-medium text-gray-800 sm:text-lg">
             {experienceInfo.jobTitle}
           </p>
         )}

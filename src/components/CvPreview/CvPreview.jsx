@@ -13,17 +13,17 @@ function CvPreview({
   experienceInfo,
 }) {
   return (
-    <div className="w-full min-h-screen h flex shadow rounded-md">
+    <div className="w-full min-h-96 md:min-h-screen flex shadow rounded-md">
       {/* Left Column */}
 
-      <div className="py-10 px-8 w-[30%] bg-gray-950">
-          <ProfilePhoto photo={personalInfo.photo} />
+      <div className="py-6 px-4 sm:px-6 w-[45%] sm:w-[30%] bg-gray-950">
+        <ProfilePhoto photo={personalInfo.photo} />
         <ContactSection contactInfo={contactInfo} />
         <SkillsSection skills={skills} />
       </div>
 
       {/* Right Column */}
-      <div className="py-8 px-10 w-[70%] border bg-white">
+      <div className="py-8 px-4 md:px-10 w-[65%] sm:w-[70%] border bg-white">
         <PersonalInfoSection personalInfo={personalInfo} />
         <EducationSection educationInfo={educationInfo} />
         <ExperienceSection experienceInfo={experienceInfo} />

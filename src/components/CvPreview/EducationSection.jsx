@@ -10,10 +10,10 @@ function EducationSection({ educationInfo }) {
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-semibold mb-6 text-center text-white bg-black py-2 px-6 rounded">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-white bg-black py-2 px-6 rounded">
         Education
       </h2>
-      <div className="flex flex-col gap-4 text-gray-500">
+      <div className="flex flex-col gap-2 sm:gap-4 text-gray-500 ">
         {(educationInfo.startDate || educationInfo.endDate) && (
           <p>
             {educationInfo.startDate}

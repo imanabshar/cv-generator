@@ -42,13 +42,13 @@ function App() {
   const [skills, setSkills] = useState([]);
 
   return (
-    <div className="w-full p-10 flex gap-10 bg-gray-100">
+    <div className="w-full p-4 md:p-10 flex flex-col lg:flex-row gap-10 bg-gray-100">
       {/* Forms Column */}
-      <div className="w-[30%] flex flex-col gap-4 items-center">
+      <div className="w-full lg:w-[30%] flex flex-col gap-4 items-center">
         <div className="flex items-center justify-center mb-4">
           <img src={logoImg} alt="" className="w-[60px]" />
           <h1
-            className="text-4xl font-extrabold text-center mb-2
+            className="text-3xl md:text-4xl font-extrabold text-center mb-2
                bg-gradient-to-r from-slate-600 to-blue-600
                bg-clip-text text-transparent"
           >
@@ -80,7 +80,7 @@ function App() {
       </div>
 
       {/*CV Preview */}
-      <div className="w-[70%]">
+      <div className="mx-auto w-full sm:w-[90%] lg:w-[70%]">
         <CvPreview
           contactInfo={contactInfo}
           skills={skills}

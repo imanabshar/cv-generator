@@ -18,8 +18,8 @@ function ContactSection({ contactInfo }) {
 
   return (
     <div className="mt-4 text-white">
-      <h2 className="text-2xl font-semibold mb-5">Contact</h2>
-      <div className="flex flex-col gap-5">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-5">Contact</h2>
+      <div className="flex flex-col gap-4 sm:gap-5 text-sm sm:text-base">
         {contactInfo.phone && (
           <p className={itemClass}>
             <FaPhone /> {contactInfo.phone}

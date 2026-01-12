@@ -3,8 +3,8 @@ function SkillsSection({ skills }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-semibold mb-5 mt-10 text-white">Skills</h2>
-      <ul className="flex flex-col gap-6 list-disc list-inside text-white space-y-1">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-5 mt-10 text-white">Skills</h2>
+      <ul className="flex flex-col gap-2 sm:gap-6 list-disc list-inside text-white space-y-1">
         {skills.map((skill) => (
           <li key={skill} className="text-white">
             {skill}
