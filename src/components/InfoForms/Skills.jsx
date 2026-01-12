@@ -24,7 +24,7 @@ function Skills({ skills, setSkills }) {
         <span className="text-[22px] font-bold">Skills</span>
       </div>
 
-      <div className="flex gap-2 mb-2">
+      <div className="flex flex-wrap gap-2 mb-2">
         <input
           type="text"
           placeholder="Enter a skill"

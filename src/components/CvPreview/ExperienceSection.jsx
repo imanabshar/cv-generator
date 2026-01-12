@@ -14,7 +14,7 @@ function ExperienceSection({ experienceInfo }) {
       <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-white bg-black py-2 px-6 rounded">
         Work Experience
       </h2>
-      <div className="flex flex-col gap-4 text-gray-500 text-sm sm:text-base">
+      <div className="flex flex-col gap-3 sm:gap-4 text-gray-500">
         {experienceInfo.jobTitle && (
           <p className="font-medium text-gray-800 sm:text-lg">
             {experienceInfo.jobTitle}
