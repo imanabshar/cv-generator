@@ -3,6 +3,8 @@
 
 ![CV Generator Preview](./public/preview.png)
 
+### 🔗 Explore the Project live [here](https://cvgenerator-app.vercel.app/). <br>
+
 ## Project Overview
 - Built as my **first React project** to gain understanding of React fundamentals.  
 - Learned state management, React Hooks and Vite Setup. 
